@@ -1,10 +1,10 @@
-/* .item:not(:last-child) {
-margin-bottom: 15px;
+.item:not(:last-child) {
+    margin-bottom: 15px;
 }
 
 .item {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
     transition: all 150ms linear;
 }
@@ -25,5 +25,8 @@ margin-bottom: 15px;
 
 .button:hover {
     color: #e64c65;
-} */
+}
 
+.span {
+    flex-basis: 130px;
+}

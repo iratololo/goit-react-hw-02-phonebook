@@ -1,25 +1,11 @@
-import { Component } from 'react';
+import {ContactListElement} from "../ContactListElement/ContactListElement"
 
-import css from "./ContactList.module.css"
-
-export class ContactList extends Component {
-    state = {  }
-    render() {
+export const ContactList = ({ contacts, deleteContact }) => {
         return (
             <ul>
-                <li className={css.item}>
-                    <span>Some</span>
-                    <button className={css.button} typy="button">Delete</button>
-                </li>
-                <li className={css.item}>
-                    <span>Some</span>
-                    <button className={css.button} typy="button">Delete</button>
-                </li>
-                <li className={css.item}>
-                    <span>Some</span>
-                    <button className={css.button} typy="button">Delete</button>
-                </li>
+                {contacts.map((item) => {
+                    return <ContactListElement key={item.id} data={item} deleteContact={deleteContact} />
+                })}
             </ul>
         );
-    }
 }
